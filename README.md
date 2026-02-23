@@ -79,6 +79,18 @@ npm run build
 node dist/cli.js
 ```
 
+**CLI Adapter Mode (experimental)**
+```bash
+# List available MCP tools via CLI
+node dist/cli.js tools list
+
+# Describe one tool schema
+node dist/cli.js tool describe manage_asset
+
+# Run one tool with JSON args
+node dist/cli.js tool run manage_tools --args '{"action":"list_tools"}'
+```
+
 ### Step 2: Install Unreal Plugin
 
 The MCP Automation Bridge plugin is included at `Unreal_mcp/plugins/McpAutomationBridge`.
@@ -295,6 +307,7 @@ docker run -it --rm -e UE_PROJECT_PATH=/project unreal-mcp
 |----------|-------------|
 | [Handler Mappings](docs/handler-mapping.md) | TypeScript to C++ routing |
 | [GraphQL API](docs/GraphQL-API.md) | Query and mutation reference |
+| [MCP to CLI Adapter](docs/MCP-to-CLI-Adapter.md) | Strategy for a generic CLI takeover layer |
 | [WebAssembly Integration](docs/WebAssembly-Integration.md) | WASM performance guide |
 | [Plugin Extension](docs/editor-plugin-extension.md) | C++ plugin architecture |
 | [Testing Guide](docs/testing-guide.md) | How to run and write tests |
